@@ -9,7 +9,7 @@ const Users = lazy(() => import('./components/Users'));
 const Photos = lazy(() => import('./components/Photos'));
 
 export default function App() {
-  const [page, setPage] = useState('posts');
+  const [page, setPage] = useState('users');
 
   return (
     <div className="container">
