@@ -154,3 +154,137 @@ body {
   height: 20px;
   margin-bottom: 10px;
 }
+
+.time-slicing-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.demo-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.demo-title {
+  color: #1a1a1a;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.demo-description {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.number-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.number-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.loader {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.number-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.number-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-color: #3b82f6;
+}
+
+/* Animation for new numbers appearing */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.number-card {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .time-slicing-container {
+    padding: 1rem;
+  }
+
+  .demo-card {
+    padding: 1.5rem;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .demo-title {
+    font-size: 1.5rem;
+  }
+}

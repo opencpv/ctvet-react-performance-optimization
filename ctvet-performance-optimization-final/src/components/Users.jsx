@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 function Users() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -34,4 +34,5 @@ function Users() {
       </div>
     );
   }
+  
 export default Users;

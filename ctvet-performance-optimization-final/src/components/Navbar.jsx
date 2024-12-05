@@ -25,6 +25,12 @@ function Navbar({ setPage }) {
         >
           Virttualized Photos List
         </button>
+        <button 
+          className="nav-button" 
+          onClick={() => setPage('time-slicing')}
+        >
+          Time Slicing Demo
+        </button>
       </nav>
     );
   }
